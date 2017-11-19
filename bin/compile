@@ -9,7 +9,8 @@ indent() {
   sed $SED_FLAG "$RE"
 }
 
-BUILD_DIR=$1
+BUILD_DIR=$1/blog
+PUBLIC_DIR=$1/public/blog
 CACHE_DIR=$2
 ENV_DIR=$3
 
@@ -54,4 +55,4 @@ fi
 echo "\n-----> Building the site"
 cd $BUILD_DIR
 mkdir -p static | indent
-./hugo | indent
+./hugo -d $PUBLIC_DIR | indent

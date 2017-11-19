@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUILD_DIR=$1
+BUILD_DIR=$1/blog
 
 CONFIG_FILE="`ls $BUILD_DIR | grep config`"
 
